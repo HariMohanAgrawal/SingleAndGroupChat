@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavigationBar" customModule="MyChat" customModuleProvider="target">
+            <connections>
+                <outlet property="imgView" destination="GgI-xk-9IN" id="NPc-KZ-dVr"/>
+                <outlet property="imgViewLeadingConstraint" destination="fPx-8B-WOP" id="ZqE-wk-ZDK"/>
+                <outlet property="leftBarButtonItem" destination="M09-Ew-hXv" id="B2d-CT-DJV"/>
+                <outlet property="subTitleLabel" destination="BF4-UT-WUC" id="vGg-OU-UIt"/>
+                <outlet property="titleLabel" destination="uQz-po-TW4" id="9BG-bi-QkH"/>
+                <outlet property="titleLeadingConstraint" destination="fX2-V9-o6b" id="vvF-Gy-dfC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M09-Ew-hXv">
+                    <rect key="frame" x="10" y="44" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="F8Z-aa-FY3"/>
+                        <constraint firstAttribute="width" constant="30" id="TuI-y8-N4Y"/>
+                    </constraints>
+                    <state key="normal" image="back"/>
+                    <connections>
+                        <action selector="leftBarBtnTapped:" destination="-1" eventType="touchUpInside" id="RX7-Cz-VFK"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQz-po-TW4">
+                    <rect key="frame" x="108" y="36" width="217" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="gux-f7-YXp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BF4-UT-WUC">
+                    <rect key="frame" x="108" y="59" width="217" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="pQC-2F-0NF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="GgI-xk-9IN">
+                    <rect key="frame" x="48" y="34" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="O18-pg-GGj"/>
+                        <constraint firstAttribute="width" constant="50" id="Ud7-Ss-gK9"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.69999999999999996"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.50588235290000005" green="0.28532762709999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="M09-Ew-hXv" secondAttribute="bottom" constant="20" id="IHy-Bn-ldH"/>
+                <constraint firstItem="BF4-UT-WUC" firstAttribute="trailing" secondItem="uQz-po-TW4" secondAttribute="trailing" id="RTb-Cc-AOM"/>
+                <constraint firstAttribute="trailing" secondItem="uQz-po-TW4" secondAttribute="trailing" constant="50" id="Tpf-m8-IQL"/>
+                <constraint firstItem="BF4-UT-WUC" firstAttribute="bottom" secondItem="GgI-xk-9IN" secondAttribute="bottom" id="aX8-SC-JRB"/>
+                <constraint firstItem="GgI-xk-9IN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="48" id="fPx-8B-WOP"/>
+                <constraint firstItem="uQz-po-TW4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="108" id="fX2-V9-o6b"/>
+                <constraint firstItem="BF4-UT-WUC" firstAttribute="leading" secondItem="uQz-po-TW4" secondAttribute="leading" id="gn2-su-ndc"/>
+                <constraint firstItem="uQz-po-TW4" firstAttribute="top" secondItem="GgI-xk-9IN" secondAttribute="top" constant="2" id="ktR-6K-gf8"/>
+                <constraint firstItem="GgI-xk-9IN" firstAttribute="centerY" secondItem="M09-Ew-hXv" secondAttribute="centerY" id="oD2-Yq-oia"/>
+                <constraint firstItem="M09-Ew-hXv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="pw1-xX-Arc">
+                    <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                </constraint>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-217.5" y="-115"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="100" height="65"/>
+        <image name="placeholder" width="112" height="112"/>
+    </resources>
+</document>
